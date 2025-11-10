@@ -21,6 +21,7 @@ export default function Header() {
     { path: '/defence-energy', label: 'Defence Energy' },
     { path: '/technology', label: 'Technology' },
     { path: '/projects', label: 'Projects' },
+    { path: '/bamboo-toolkit', label: 'Bamboo Toolkit' },
     { path: '/insights', label: 'Insights' },
     { path: '/contact', label: 'Contact' }
   ];

@@ -10,6 +10,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import InsightsPage from './pages/InsightsPage';
 import ContactPage from './pages/ContactPage';
 import BlogArticlePage from './pages/BlogArticlePage';
+import BambooToolkitPage from './pages/BambooToolkitPage';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="defence-energy" element={<DefenceEnergyPage />} />
             <Route path="technology" element={<TechnologyPage />} />
             <Route path="projects" element={<ProjectsPage />} />
+            <Route path="bamboo-toolkit" element={<BambooToolkitPage />} />
             <Route path="insights" element={<InsightsPage />} />
             <Route path="insights/:slug" element={<BlogArticlePage />} />
             <Route path="contact" element={<ContactPage />} />

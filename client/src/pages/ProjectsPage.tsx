@@ -29,12 +29,14 @@ export default function ProjectsPage() {
       phase: 'Phase 1',
       title: 'Pilot Plant - Bamboo to Battery-Grade Graphite',
       status: 'In Progress',
-      description: 'Pilot-scale facility demonstrating the conversion of Beema bamboo into battery-grade graphite through proprietary biorefinery processes, validating technology readiness and material specifications',
+      description: "World's first Bamboo to Battery-Grade Graphite conversion facility, demonstrating a carbon-negative process developed in partnership with CSIRO. This groundbreaking pilot plant validates our proprietary technology for converting Beema bamboo into high-purity graphite, powered entirely by renewable energy.",
       achievements: [
-        'Pilot plant design and engineering in development',
-        'Proprietary bamboo-to-graphite conversion process under validation',
-        'Target: Battery-grade graphite (99.95%+ purity)',
-        'Process optimization and materials characterization ongoing'
+        "🌍 World's first Bamboo to Battery-Grade Graphite conversion facility",
+        '🔬 Process developed in partnership with CSIRO',
+        '🌱 Carbon Negative process - actively removes CO₂ from the atmosphere',
+        '⚡ Powered with 100% renewable energy',
+        '🎯 Target: Battery-grade graphite (99.95%+ purity)',
+        '🔧 Pilot plant design and engineering in development'
       ]
     },
     {

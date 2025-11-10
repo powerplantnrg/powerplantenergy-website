@@ -11,40 +11,25 @@ export default function NewsSection({ id }: NewsSectionProps) {
 
   const articles = [
     {
-      title: 'Power Plant Energy Secures Strategic Partnership',
-      date: 'October 15, 2025',
-      category: 'Partnership',
-      excerpt: 'New collaboration accelerates biorefinery development and sustainable fuel production.'
+      title: 'Pioneering Australia\'s Green Energy Future',
+      date: 'November 2024',
+      category: 'Innovation',
+      excerpt: 'Power Plant Energy is leading the charge in sustainable energy solutions with groundbreaking bamboo-based technologies.',
+      url: 'https://www.linkedin.com/posts/power-plant-energy_pioneering-australias-green-energy-future-activity-7389805561174978560-GUzY'
     },
     {
-      title: 'Breakthrough in Bio-Graphite Technology',
-      date: 'October 8, 2025',
-      category: 'Technology',
-      excerpt: 'Innovative process achieves battery-grade purity from bamboo feedstock.'
+      title: 'New Article from Power Plant Energy',
+      date: 'October 2024',
+      category: 'Insights',
+      excerpt: 'Discover our latest insights on sustainable fuel production and critical minerals development.',
+      url: 'https://www.linkedin.com/posts/power-plant-energy_new-article-from-power-plant-energy-activity-7385340516000763905-zDob'
     },
     {
-      title: 'Australia Leads in Sustainable Aviation Fuel',
-      date: 'October 1, 2025',
-      category: 'Industry',
-      excerpt: 'Government funding positions domestic SAF production for exponential growth.'
-    },
-    {
-      title: 'Carbon-Negative Manufacturing at Scale',
-      date: 'September 24, 2025',
-      category: 'Impact',
-      excerpt: 'Power Plant Energy demonstrates net-negative emissions in pilot facility.'
-    },
-    {
-      title: 'Critical Minerals Strategy Update',
-      date: 'September 17, 2025',
-      category: 'Policy',
-      excerpt: 'Federal government expands support for domestic graphite production.'
-    },
-    {
-      title: 'Bamboo: The Future of Sustainable Materials',
-      date: 'September 10, 2025',
-      category: 'Research',
-      excerpt: 'New study validates bamboo as optimal feedstock for biorefinery applications.'
+      title: 'How Do We Grow Enough to Satisfy SAF Demands?',
+      date: 'September 2024',
+      category: 'Analysis',
+      excerpt: 'Exploring the scalability challenges and solutions for sustainable aviation fuel production from bamboo.',
+      url: 'https://www.linkedin.com/posts/power-plant-energy_how-do-we-grow-enough-to-satisfy-saf-demands-activity-7363831066987585536-Nwdf'
     }
   ];
 
@@ -115,9 +100,12 @@ export default function NewsSection({ id }: NewsSectionProps) {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {articles.map((article, index) => (
-            <div
+            <a
               key={index}
-              className="flex-shrink-0 w-[400px] bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] p-8 hover:bg-white/10 hover:border-white/20 transition-all cursor-pointer group"
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 w-[400px] bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] p-8 hover:bg-white/10 hover:border-white/20 transition-all cursor-pointer group block"
             >
               {/* Category Badge */}
               <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
@@ -143,7 +131,7 @@ export default function NewsSection({ id }: NewsSectionProps) {
                   {article.date}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
