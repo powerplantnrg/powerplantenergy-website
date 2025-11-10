@@ -70,7 +70,7 @@ export default function BambooToolkitPage() {
       </section>
 
       {/* Toolkit Navigation */}
-      <section className="bg-white/5 backdrop-blur-sm border-y border-white/10 sticky top-0 z-40">
+      <section className="bg-white border-b-2 border-slate-200 sticky top-0 z-40 shadow-sm">
         <div className="max-w-[1920px] mx-auto px-10">
           <div className="flex overflow-x-auto">
             {navigationItems.map((item) => {
@@ -80,10 +80,10 @@ export default function BambooToolkitPage() {
                   key={item.id}
                   onClick={() => setCurrentPage(item.id)}
                   className={`
-                    flex items-center gap-2 px-6 py-4 border-b-2 transition-colors whitespace-nowrap
+                    flex items-center gap-2 px-6 py-4 border-b-3 transition-all whitespace-nowrap font-medium
                     ${currentPage === item.id
-                      ? 'border-emerald-500 text-emerald-400'
-                      : 'border-transparent text-white/60 hover:text-white hover:border-white/30'
+                      ? 'border-emerald-600 text-emerald-700 bg-emerald-50'
+                      : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                     }
                   `}
                 >
@@ -97,7 +97,7 @@ export default function BambooToolkitPage() {
       </section>
 
       {/* Toolkit Content */}
-      <section className="relative py-16 min-h-screen">
+      <section className="relative py-16 min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-[1920px] mx-auto px-10">
           {renderPage()}
         </div>
