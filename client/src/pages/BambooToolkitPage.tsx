@@ -51,18 +51,18 @@ export default function BambooToolkitPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 overflow-hidden bg-gradient-to-b from-black via-emerald-950/20 to-black">
+      <section className="relative pt-40 pb-20 overflow-hidden bg-white">
         <div className="max-w-[1920px] mx-auto px-10 relative z-10">
           <div className="max-w-5xl">
-            <div className="bg-white box-border content-stretch inline-flex gap-[10px] items-center justify-center px-[17px] py-[8px] rounded-[4px] mb-8">
+            <div className="bg-emerald-50 border-2 border-emerald-200 box-border content-stretch inline-flex gap-[10px] items-center justify-center px-[17px] py-[8px] rounded-[4px] mb-8">
               <p className="font-['Poppins:Medium',_sans-serif] leading-[1.1] not-italic text-[10px] text-black text-nowrap tracking-[-0.4px] whitespace-pre">Grower Resources</p>
             </div>
 
-            <h1 className="font-['Poppins:SemiBold',_sans-serif] leading-[1.1] not-italic text-[96px] text-white tracking-[-3.84px] mb-12">
+            <h1 className="font-['Poppins:SemiBold',_sans-serif] leading-[1.1] not-italic text-[96px] text-slate-900 tracking-[-3.84px] mb-12">
               Bamboo Growers Toolkit
             </h1>
 
-            <p className="font-['Poppins:SemiBold',_sans-serif] leading-[1.3] not-italic text-[28px] text-white/90 tracking-[-1.68px] mb-12">
+            <p className="font-['Poppins:SemiBold',_sans-serif] leading-[1.3] not-italic text-[28px] text-slate-700 tracking-[-1.68px] mb-12">
               Comprehensive tools and resources to support sustainable bamboo cultivation. Calculate potential income, access plant genetics information, map yields, and register your property for our biorefinery feedstock program.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function BambooToolkitPage() {
       </section>
 
       {/* Toolkit Content */}
-      <section className="relative py-16 min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <section className="relative py-16 min-h-screen bg-white">
         <div className="max-w-[1920px] mx-auto px-10">
           {renderPage()}
         </div>
