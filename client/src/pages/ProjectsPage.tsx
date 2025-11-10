@@ -12,8 +12,8 @@ export default function ProjectsPage() {
     "itemListElement": [
       {
         "@type": "Project",
-        "name": "Pilot Biorefinery",
-        "description": "Technology validation and materials testing facility"
+        "name": "Pilot Plant - Bamboo to Battery-Grade Graphite",
+        "description": "Pilot-scale facility demonstrating bamboo-to-graphite conversion technology"
       },
       {
         "@type": "Project",
@@ -27,14 +27,14 @@ export default function ProjectsPage() {
     {
       icon: FlaskConical,
       phase: 'Phase 1',
-      title: 'Pilot Biorefinery',
-      status: 'Completed',
-      description: 'Technology validation facility demonstrating core biorefinery processes, materials characterisation, and co-product recovery at pilot scale',
+      title: 'Pilot Plant - Bamboo to Battery-Grade Graphite',
+      status: 'In Progress',
+      description: 'Pilot-scale facility demonstrating the conversion of Beema bamboo into battery-grade graphite through proprietary biorefinery processes, validating technology readiness and material specifications',
       achievements: [
-        'Validated cellulose recovery of 85-90%',
-        'Produced battery-grade graphite samples (99.95%+ purity)',
-        'Third-party materials testing confirming specifications',
-        'Process optimisation and scale-up engineering'
+        'Pilot plant design and engineering in development',
+        'Proprietary bamboo-to-graphite conversion process under validation',
+        'Target: Battery-grade graphite (99.95%+ purity)',
+        'Process optimization and materials characterization ongoing'
       ]
     },
     {
@@ -113,6 +113,7 @@ export default function ProjectsPage() {
                       <span className="text-violet-400 text-[18px]">{project.phase}</span>
                       <span className={`px-4 py-1 rounded-full text-sm ${
                         project.status === 'Completed' ? 'bg-green-500/20 text-green-400' :
+                        project.status === 'In Progress' ? 'bg-yellow-500/20 text-yellow-400' :
                         project.status === 'Development' ? 'bg-blue-500/20 text-blue-400' :
                         'bg-purple-500/20 text-purple-400'
                       }`}>
