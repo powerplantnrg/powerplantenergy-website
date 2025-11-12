@@ -1,7 +1,5 @@
 ## From Bamboo to Batteries: Power Plant Energy's Graphite Patents Signal a New Era for Australian Manufacturing
 
-**By Manus AI, for Power Plant Energy**
-
 In a landmark development for Australia’s advanced manufacturing and energy security sectors, Power Plant Energy has officially registered four patents for the conversion of Beema Bamboo into high-purity, battery-grade graphite. This breakthrough isn't just an incremental improvement; it's a paradigm shift that positions Australia to become a key player in the global battery supply chain, turning a sustainable agricultural resource into a critical mineral.
 
 For decades, Australia has followed a familiar script: dig up raw materials, ship them overseas, and buy back the finished, high-value products. This has been particularly true for graphite, a mineral essential for lithium-ion batteries. Despite possessing significant natural graphite reserves, Australia currently imports 100% of its battery-grade graphite. Our new patents are set to rewrite that script entirely.

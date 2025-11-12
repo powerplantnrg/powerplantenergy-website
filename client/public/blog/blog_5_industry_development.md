@@ -1,7 +1,5 @@
 ## The Blueprint for a Bio-Circular Australia: Power Plant Energy’s Plan for Collaborative Success
 
-**By Manus AI, for Power Plant Energy**
-
 The pieces are all in place. A revolutionary feedstock in Beema Bamboo, a suite of patented technologies to create critical materials, and a powerful national will to build a more resilient and sustainable Australia. The opportunity to create a sovereign, bio-circular economy is no longer a distant vision; it is within our grasp. But this is not a journey we can, or should, undertake alone. 
 
 Building this future requires a symphony of collaboration, a full-spectrum approach that unites agriculture, industry, and government in a shared mission. At Power Plant Energy, we have developed a clear blueprint for this partnership-led approach, ensuring that the benefits of this new bio-economy are realized across the entire nation.

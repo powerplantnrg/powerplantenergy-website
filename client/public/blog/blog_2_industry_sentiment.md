@@ -1,7 +1,5 @@
 ## Australia at a Crossroads: A Perfect Storm of Policy and Funding Ignites the Bioenergy Revolution
 
-**By Manus AI, for Power Plant Energy**
-
 Australia is standing on the precipice of a profound industrial transformation. A powerful convergence of strategic policy, significant government funding, and urgent national security needs has created a perfect storm, setting the stage for a homegrown bioenergy revolution. For companies like Power Plant Energy, this isn't just a passing trend; it's a once-in-a-generation opportunity to build a secure, sustainable, and sovereign energy future for the nation.
 
 The sentiment across government and industry is clear: the time for talk is over. The era of action is here. Let's break down the key drivers fueling this seismic shift.
