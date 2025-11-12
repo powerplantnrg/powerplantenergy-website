@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useRoute, Link } from 'wouter';
+import { useParams, Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { blogArticles } from '../data/blog-articles';
 import ReactMarkdown from 'react-markdown';
 
 export default function BlogArticlePage() {
-  const [, params] = useRoute('/insights/:slug');
+  const params = useParams<{ slug: string }>();
   const [content, setContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
 
@@ -43,9 +43,7 @@ export default function BlogArticlePage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-[48px] text-white mb-4">Article Not Found</h1>
-          <Link href="/insights">
-            <a className="text-emerald-400 hover:text-emerald-300">← Back to Insights</a>
-          </Link>
+          <Link to="/insights" className="text-emerald-400 hover:text-emerald-300">← Back to Insights</Link>
         </div>
       </div>
     );
@@ -65,10 +63,8 @@ export default function BlogArticlePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-emerald-950/20 to-black" />
         
         <div className="max-w-[1200px] mx-auto px-10 relative z-10">
-          <Link href="/insights">
-            <a className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8 transition-colors">
-              <span className="mr-2">←</span> Back to Insights
-            </a>
+          <Link to="/insights" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8 transition-colors">
+            <span className="mr-2">←</span> Back to Insights
           </Link>
 
           <div className="mb-6">
@@ -137,8 +133,7 @@ export default function BlogArticlePage() {
               .filter(a => a.id !== article.id && a.category === article.category)
               .slice(0, 2)
               .map((relatedArticle) => (
-                <Link key={relatedArticle.id} href={`/insights/${relatedArticle.slug}`}>
-                  <a className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
+                <Link key={relatedArticle.id} to={`/insights/${relatedArticle.slug}`} className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
                     <div className="mb-4">
                       <span className="inline-block bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-['Poppins:Medium',_sans-serif]">
                         {relatedArticle.category}
@@ -152,16 +147,13 @@ export default function BlogArticlePage() {
                     <p className="text-white/80 text-[16px] leading-[1.6]">
                       {relatedArticle.excerpt}
                     </p>
-                  </a>
                 </Link>
               ))}
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/insights">
-              <a className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-['Poppins:SemiBold',_sans-serif] px-12 py-4 rounded-lg text-[18px] tracking-[-0.36px] transition-all duration-300">
-                View All Articles
-              </a>
+            <Link to="/insights" className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-['Poppins:SemiBold',_sans-serif] px-12 py-4 rounded-lg text-[18px] tracking-[-0.36px] transition-all duration-300">
+              View All Articles
             </Link>
           </div>
         </div>

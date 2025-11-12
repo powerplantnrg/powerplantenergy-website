@@ -1,6 +1,6 @@
 import SEO from '../components/SEO';
 import { blogArticles } from '../data/blog-articles';
-import { Link } from 'wouter';
+import { Link } from 'react-router-dom';
 
 export default function InsightsPage() {
   const structuredData = {
@@ -50,8 +50,7 @@ export default function InsightsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogArticles.map((article) => (
-              <Link key={article.id} href={`/insights/${article.slug}`}>
-                <a className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
+              <Link key={article.id} to={`/insights/${article.slug}`} className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
                   <div className="mb-4">
                     <span className="inline-block bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-['Poppins:Medium',_sans-serif]">
                       {article.category}
@@ -70,7 +69,6 @@ export default function InsightsPage() {
                     <span>{article.date}</span>
                     <span>{article.readTime}</span>
                   </div>
-                </a>
               </Link>
             ))}
           </div>
@@ -137,10 +135,8 @@ export default function InsightsPage() {
           <p className="text-white/80 text-[20px] mb-12 max-w-3xl mx-auto">
             Follow our progress and connect with our team to discuss how Power Plant Energy can support your organisation's sustainability and sovereignty objectives.
           </p>
-          <Link href="/contact">
-            <a className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-['Poppins:SemiBold',_sans-serif] px-12 py-4 rounded-lg text-[18px] tracking-[-0.36px] transition-all duration-300">
-              Contact Now
-            </a>
+          <Link to="/contact" className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-['Poppins:SemiBold',_sans-serif] px-12 py-4 rounded-lg text-[18px] tracking-[-0.36px] transition-all duration-300">
+            Contact Now
           </Link>
         </div>
       </section>
