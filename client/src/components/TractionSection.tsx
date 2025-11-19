@@ -7,7 +7,7 @@ export default function TractionSection() {
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-auto opacity-50">
         <img 
           src={imgGradient1} 
-          alt="" 
+          alt="Commercial validation background representing market traction and proven technology" 
           className="w-full h-auto object-cover blur-2xl"
         />
       </div>

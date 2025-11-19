@@ -59,7 +59,7 @@ export default function HeroSection() {
 
           {/* Tagline */}
           <p className="font-['Poppins:Medium',_sans-serif] leading-[1.3] not-italic text-[clamp(1.25rem,3vw,2.625rem)] text-white/80 tracking-[clamp(-0.2px,-0.2vw,-0.84px)] max-w-[1000px] px-4">
-            Intelligent Transformation
+            Securing Australia's Future with Sovereign Fuels & Critical Minerals
           </p>
         </div>
       </div>

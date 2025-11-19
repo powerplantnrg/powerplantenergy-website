@@ -136,7 +136,7 @@ export default function InsightsPage() {
             Follow our progress and connect with our team to discuss how Power Plant Energy can support your organisation's sustainability and sovereignty objectives.
           </p>
           <Link to="/contact" className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-['Poppins:SemiBold',_sans-serif] px-12 py-4 rounded-lg text-[18px] tracking-[-0.36px] transition-all duration-300">
-            Contact Now
+            Subscribe for Project Updates
           </Link>
         </div>
       </section>

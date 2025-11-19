@@ -11,7 +11,7 @@ export default function ImpactSection({ id }: ImpactSectionProps) {
       <div className="absolute inset-0 opacity-30">
         <img 
           src={imgGradient} 
-          alt="" 
+          alt="Regenerative business background representing carbon-negative manufacturing and environmental restoration" 
           className="w-full h-full object-cover"
         />
       </div>

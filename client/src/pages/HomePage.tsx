@@ -9,6 +9,7 @@ import SolutionSection from '../components/SolutionSection';
 import TechnologySection from '../components/TechnologySection';
 import ImpactSection from '../components/ImpactSection';
 import TractionSection from '../components/TractionSection';
+import TestimonialsSection from '../components/TestimonialsSection';
 import NewsSection from '../components/NewsSection';
 import SocialsSection from '../components/SocialsSection';
 import ImageBanner from '../components/ImageBanner';
@@ -69,7 +70,7 @@ export default function HomePage() {
     <>
       <SEO
         title="Power Plant Energy | Sovereign Fuels & Critical Minerals Australia"
-        description="Power Plant Energy transforms bamboo into battery-grade graphite and sustainable aviation fuel for Australian defence, industry, and transport. Building Australia's sovereign energy capability through locally-produced critical minerals and carbon-negative manufacturing."
+        description="Building Australia's sovereign capability with sustainable fuels and critical minerals. Our biorefinery produces battery-grade graphite and SAF for defence."
         keywords="sustainable fuels Australia, critical minerals supply chain, sovereign energy capability, biofuel refinery, Australian defence energy security, battery graphite production, renewable fuel ADF, local critical mineral refining, carbon negative manufacturing, bamboo biorefinery"
         canonicalUrl="https://powerplantenergy.com.au"
         structuredData={structuredData}
@@ -91,6 +92,7 @@ export default function HomePage() {
       <TechnologySection />
       <ImpactSection />
       <TractionSection />
+      <TestimonialsSection />
       
       <ImageBanner src={bannerLeafTexture} alt="Natural biomass materials used in critical minerals extraction and sustainable aviation fuel production for Australian defence" />
       

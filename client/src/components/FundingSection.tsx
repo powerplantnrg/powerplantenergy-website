@@ -42,7 +42,7 @@ export default function FundingSection({ id }: FundingSectionProps) {
       <div className="absolute inset-0 opacity-20">
         <img 
           src={imgLandscape} 
-          alt="" 
+          alt="Australian landscape representing government funding opportunities for sovereign energy and critical minerals development" 
           className="w-full h-full object-cover"
         />
       </div>

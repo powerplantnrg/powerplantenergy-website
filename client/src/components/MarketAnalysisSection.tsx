@@ -25,7 +25,7 @@ export default function MarketAnalysisSection({ id }: MarketAnalysisSectionProps
       <div className="absolute inset-0 opacity-40">
         <img 
           src={imgGradient} 
-          alt="" 
+          alt="Market growth background representing explosive demand for battery-grade graphite and sustainable aviation fuel" 
           className="w-full h-full object-cover"
         />
       </div>

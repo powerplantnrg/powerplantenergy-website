@@ -52,7 +52,7 @@ export default function NewsSection({ id }: NewsSectionProps) {
       <div className="absolute inset-0 opacity-40">
         <img 
           src={imgGradient} 
-          alt="" 
+          alt="News and insights background showcasing latest developments in sustainable energy and critical minerals" 
           className="w-full h-full object-cover"
         />
       </div>

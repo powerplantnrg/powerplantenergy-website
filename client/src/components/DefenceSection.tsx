@@ -30,7 +30,7 @@ export default function DefenceSection({ id }: DefenceSectionProps) {
       <div className="absolute inset-0">
         <img 
           src={imgGradient} 
-          alt="" 
+          alt="Advanced technology background representing sovereign defence energy solutions for Australian military" 
           className="w-full h-full object-cover opacity-30"
         />
       </div>

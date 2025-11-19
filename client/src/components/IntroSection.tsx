@@ -45,7 +45,7 @@ export default function IntroSection({ sustainableImage, id }: IntroSectionProps
               <div className="absolute inset-0 z-10">
                 <img 
                   src={imgGradient} 
-                  alt="" 
+                  alt="Gradient overlay enhancing visual presentation of sustainable energy landscape" 
                   className="w-full h-full object-cover opacity-40 mix-blend-overlay"
                 />
               </div>
