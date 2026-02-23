@@ -1,38 +1,32 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
-import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import SustainableFuelsPage from './pages/SustainableFuelsPage';
-import CriticalMineralsPage from './pages/CriticalMineralsPage';
-import DefenceEnergyPage from './pages/DefenceEnergyPage';
-import TechnologyPage from './pages/TechnologyPage';
-import ProjectsPage from './pages/ProjectsPage';
-import InsightsPage from './pages/InsightsPage';
-import ContactPage from './pages/ContactPage';
-import BlogArticlePage from './pages/BlogArticlePage';
-import BambooToolkitPage from './pages/BambooToolkitPage';
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import NotFound from "@/pages/NotFound";
+import { Route, Switch } from "wouter";
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Home from "./pages/Home";
 
-export default function App() {
+function Router() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="sustainable-fuels" element={<SustainableFuelsPage />} />
-            <Route path="critical-minerals" element={<CriticalMineralsPage />} />
-            <Route path="defence-energy" element={<DefenceEnergyPage />} />
-            <Route path="technology" element={<TechnologyPage />} />
-            <Route path="projects" element={<ProjectsPage />} />
-            <Route path="bamboo-toolkit" element={<BambooToolkitPage />} />
-            <Route path="insights" element={<InsightsPage />} />
-            <Route path="insights/:slug" element={<BlogArticlePage />} />
-            <Route path="contact" element={<ContactPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      <Analytics />
-    </>
+    <Switch>
+      <Route path={"/"} component={Home} />
+      <Route path={"/404"} component={NotFound} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
+
+function App() {
+  return (
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="light">
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
+  );
+}
+
+export default App;

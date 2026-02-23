@@ -1,88 +1,221 @@
-import imgGradient from "/assets/9d08830d73ac68d798cb01e6045b08d28ab08da9.png";
-import { Shield, Zap, Lock } from 'lucide-react';
+/*
+ * SOVEREIGN BOTANICA — Defence & Security Section
+ * Design: Dark background, 2-column layout with features + sidebar
+ * Typography: Big Shoulders Display headings, IBM Plex Mono labels
+ * Colors: --carbon-ground bg, --transformation accents
+ */
 
-interface DefenceSectionProps {
-  id?: string;
-}
+const features = [
+  {
+    icon: "01",
+    title: "Sovereign Fuel Security",
+    desc: "Domestically produced SAF eliminates reliance on imported petroleum supply chains vulnerable to disruption. Direct fuel sovereignty for ADF aviation operations.",
+  },
+  {
+    icon: "02",
+    title: "Critical Minerals Independence",
+    desc: "Battery-grade graphite produced on Australian soil addresses the strategic vulnerability of depending on a single foreign supplier for this essential anode material.",
+  },
+  {
+    icon: "03",
+    title: "AUKUS Alignment",
+    desc: "Our capabilities directly support AUKUS Pillar II advanced capability requirements — ensuring interoperability with allied forces through secure, domestic supply chains.",
+  },
+  {
+    icon: "04",
+    title: "Regional Resilience",
+    desc: "North Queensland production provides geographic diversification and proximity to key Indo-Pacific operations — reducing logistical vulnerability in the northern approaches.",
+  },
+];
 
-export default function DefenceSection({ id }: DefenceSectionProps) {
-  const capabilities = [
-    {
-      icon: Shield,
-      title: 'Operational Resilience',
-      description: 'Sovereign fuel production reducing reliance on vulnerable global supply chains'
-    },
-    {
-      icon: Zap,
-      title: 'Reduced Emissions',
-      description: 'High-performance sustainable fuels meeting defence operational requirements'
-    },
-    {
-      icon: Lock,
-      title: 'Secure Supply Chains',
-      description: 'Australian-sourced materials ensuring energy independence and national security'
-    }
-  ];
+const sidebarItems = [
+  { label: "Framework", value: "AUKUS Pillar II" },
+  { label: "Policy", value: "DSR 2024" },
+  { label: "Strategy", value: "Critical Minerals" },
+  { label: "Ownership", value: "100% Australian" },
+  { label: "Location", value: "Queensland" },
+  { label: "Security", value: "Domestic Only" },
+];
 
+export default function DefenceSection() {
   return (
-    <section id={id} className="relative py-32 overflow-hidden" aria-labelledby="defence-heading">
-      {/* Gradient Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src={imgGradient} 
-          alt="Advanced technology background representing sovereign defence energy solutions for Australian military" 
-          className="w-full h-full object-cover opacity-30"
-        />
-      </div>
+    <section
+      id="defence"
+      style={{
+        padding: "7rem 0",
+        background: "var(--carbon-ground)",
+        color: "var(--white)",
+        borderTop: "1px solid rgba(255,255,255,0.12)",
+      }}
+    >
+      <div className="container-ppe">
+        {/* Section Label */}
+        <div
+          className="section-label heading-section"
+          style={{ color: "var(--transformation)" }}
+        >
+          Defence &amp; Security
+        </div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+        {/* Title */}
+        <h2
+          className="display-lg"
+          style={{ marginBottom: "1.5rem" }}
+        >
+          Powering Australia's
+          <br />
+          Defence Sovereignty
+        </h2>
 
-      <div className="max-w-[1920px] mx-auto px-10 relative z-10">
-        {/* Section Header */}
-        <div className="mb-24 text-center">
-          <div className="bg-white box-border content-stretch inline-flex gap-[10px] items-center justify-center px-[17px] py-[8px] rounded-[4px] mb-8">
-            <p className="font-['Poppins:Medium',_sans-serif] leading-[1.1] not-italic text-[10px] text-black text-nowrap tracking-[-0.4px] whitespace-pre">Strategic Partnership</p>
+        {/* Intro */}
+        <p
+          className="body-md"
+          style={{
+            maxWidth: "640px",
+            color: "rgba(255,255,255,0.5)",
+            marginBottom: "3.5rem",
+          }}
+        >
+          Aligned with AUKUS imperatives and the Defence Strategic Review, our
+          sovereign production capabilities address critical supply chain
+          vulnerabilities.
+        </p>
+
+        {/* Grid */}
+        <div className="defence-grid">
+          {/* Features */}
+          <div style={{ display: "grid", gap: "2rem" }}>
+            {features.map((feature) => (
+              <div
+                key={feature.icon}
+                style={{
+                  display: "flex",
+                  gap: "1.5rem",
+                  alignItems: "flex-start",
+                }}
+              >
+                {/* Icon */}
+                <div
+                  style={{
+                    flexShrink: 0,
+                    width: "44px",
+                    height: "44px",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "var(--font-heading)",
+                    fontSize: "0.7rem",
+                    fontWeight: 800,
+                    color: "var(--transformation)",
+                  }}
+                >
+                  {feature.icon}
+                </div>
+
+                <div>
+                  {/* Title */}
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      fontSize: "0.85rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      marginBottom: "0.4rem",
+                    }}
+                  >
+                    {feature.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    style={{
+                      fontSize: "0.85rem",
+                      color: "rgba(255,255,255,0.5)",
+                      lineHeight: 1.65,
+                    }}
+                  >
+                    {feature.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <h2 className="font-['Poppins:Medium',_sans-serif] leading-[1.1] not-italic text-[96px] text-white tracking-[-3.84px] mb-12">
-            Securing Australia's<br />Strategic Energy Future
-          </h2>
+          {/* Sidebar */}
+          <div
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.12)",
+              padding: "2.5rem 2rem",
+            }}
+          >
+            <h3
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                marginBottom: "1.5rem",
+                color: "var(--transformation)",
+              }}
+            >
+              Strategic Alignment
+            </h3>
 
-          <p className="font-['Poppins:Medium',_sans-serif] leading-[1.4] text-[28px] text-white/90 tracking-[-0.56px] max-w-[1200px] mx-auto mb-8">
-            Power Plant Energy views the Australian Defence Force as a cornerstone client in the nation's transition toward energy independence. Recognising the critical risks of imported fuel dependency, we are building the capacity to supply sovereign, high-performance sustainable fuels derived from Australian resources.
-          </p>
-
-          <p className="font-['Poppins:Medium',_sans-serif] leading-[1.4] text-[24px] text-white/70 tracking-[-0.48px] max-w-[1100px] mx-auto">
-            Our technologies are designed to provide operational resilience, reduced emissions, and secure local supply chains—ensuring that Defence can operate confidently in an uncertain global energy landscape.
-          </p>
-        </div>
-
-        {/* Capabilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
-          {capabilities.map((capability, index) => {
-            const Icon = capability.icon;
-            return (
-              <div 
-                key={index} 
-                className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] p-10 hover:bg-white/10 hover:border-white/20 transition-all group"
+            {sidebarItems.map((item, i) => (
+              <div
+                key={item.label}
+                style={{
+                  padding: "1rem 0",
+                  borderBottom:
+                    i < sidebarItems.length - 1
+                      ? "1px solid rgba(255,255,255,0.12)"
+                      : "none",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "baseline",
+                }}
               >
-                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 group-hover:bg-white/20 transition-all">
-                  <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
-                </div>
-                
-                <h3 className="font-['Poppins:Medium',_sans-serif] leading-[1.2] text-[28px] text-white tracking-[-0.56px] mb-4">
-                  {capability.title}
-                </h3>
-                
-                <p className="font-['Poppins:Medium',_sans-serif] leading-[1.4] text-[18px] text-white/70 tracking-[-0.36px]">
-                  {capability.description}
-                </p>
+                <span
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.65rem",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "rgba(255,255,255,0.4)",
+                  }}
+                >
+                  {item.label}
+                </span>
+                <span
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    fontWeight: 700,
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  {item.value}
+                </span>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
+
+      <style>{`
+        .defence-grid {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 4rem;
+          align-items: start;
+        }
+        @media (max-width: 1024px) {
+          .defence-grid { grid-template-columns: 1fr; }
+        }
+      `}</style>
     </section>
   );
 }

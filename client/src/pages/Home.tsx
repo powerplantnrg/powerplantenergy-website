@@ -1,22 +1,29 @@
-import { Button } from "@/components/ui/button";
-import { APP_LOGO, APP_TITLE } from "@/const";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import MissionSection from "@/components/MissionSection";
+import CapabilitiesSection from "@/components/CapabilitiesSection";
+import BCDFSection from "@/components/BCDFSection";
+import SovereigntyBanner from "@/components/SovereigntyBanner";
+import ProcessSection from "@/components/ProcessSection";
+import DefenceSection from "@/components/DefenceSection";
+import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
-/**
- * All content in this page are only for example, delete if unneeded
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
-  // Use APP_LOGO (as image src) and APP_TITLE if needed
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        Example Page
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
+    <>
+      <Navigation />
+      <HeroSection />
+      <MissionSection />
+      <CapabilitiesSection />
+      <BCDFSection />
+      <SovereigntyBanner />
+      <ProcessSection />
+      <DefenceSection />
+      <FAQSection />
+      <CTASection />
+      <Footer />
+    </>
   );
 }
