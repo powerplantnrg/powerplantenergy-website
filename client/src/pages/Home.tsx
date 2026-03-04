@@ -6,7 +6,6 @@ import BCDFSection from "@/components/BCDFSection";
 import SovereigntyBanner from "@/components/SovereigntyBanner";
 import ProcessSection from "@/components/ProcessSection";
 import DefenceSection from "@/components/DefenceSection";
-import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <SovereigntyBanner />
       <ProcessSection />
       <DefenceSection />
-      <FAQSection />
       <CTASection />
       <Footer />
     </>

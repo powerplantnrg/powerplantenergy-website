@@ -95,7 +95,6 @@ export default function Navigation() {
             { href: "#bcdf", label: "Burdekin BCDF" },
             { href: "#process", label: "Process" },
             { href: "#defence", label: "Defence" },
-            { href: "#faq", label: "FAQ" },
           ].map((link) => (
             <li key={link.href}>
               <a
@@ -223,7 +222,6 @@ export default function Navigation() {
             { href: "#bcdf", label: "Burdekin BCDF" },
             { href: "#process", label: "Process" },
             { href: "#defence", label: "Defence" },
-            { href: "#faq", label: "FAQ" },
             { href: "#contact", label: "Contact Us" },
           ].map((link) => (
             <a
